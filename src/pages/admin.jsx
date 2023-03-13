@@ -9,11 +9,12 @@ import { useRouter } from "next/navigation";
 import { Auth } from "aws-amplify";
 import styles from "../styles/Home.module.css";
 import { DataStore } from "@aws-amplify/datastore";
-import { ApplicantList} from "../models";
+// import { ApplicantList, JobList} from "../models";
 import Image from "next/image";
 import Swal from "sweetalert2";
 import Navbar from "@/components/Navbar/Navbar";
-import addnewjob from "./api/addnewjob";
+// import addnewjob from "./api/addnewjob";
+import { JobList } from "@/models";
 
 Amplify.configure({ ...awsconfig, ssr: true });
 
@@ -50,7 +51,32 @@ function Admin({ signOut, user }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await addnewjob(state);
+        // const res = await addnewjob(state);
+        await DataStore.save(
+            new JobList({
+                JobPosition: `${data.jobPosition}`,
+                Category: `${data.Category}`,
+                Location: `${data.Location}`,
+                Experience: `${data.Experience}`,
+                JobStatus: `${data.JobStatus}`,
+                Agency: `${data.Agency}`,
+                Description: `${data.Description}`,
+            })
+        ).then(savedItem => {
+            // console.log('Item saved successfully:', savedItem);
+            Swal.fire({
+                title: "Application successfully",
+                showConfirmButton: true,
+                confirmButtonText: "Ok",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    router.push("/");
+                }
+            });
+        }).catch(error => {
+            console.error('Error saving item:', error);
+        })
+
         if (res.success) {
             Swal.fire({
                 title: "Job added successfully",
