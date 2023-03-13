@@ -7,7 +7,7 @@ import "@aws-amplify/ui-react/styles.css";
 // import awsconfig from '../../aws-exports';
 import { Auth } from "aws-amplify";
 
-// Amplify.configure({ ...awsconfig, ssr: true });
+// ({ ...awsconfig, ssr: true });
 
 const Navbar = () => {
     const [authenticated, setauthenticated] = useState(false);
