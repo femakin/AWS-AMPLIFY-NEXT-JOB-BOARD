@@ -1,0 +1,23 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jobboard-staging-134522-authRole",
+      "UnauthRoleArn": "arn:aws:iam::501010171970:role/amplify-jobboard-staging-134522-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::501010171970:role/amplify-jobboard-staging-134522-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-jobboard-staging-134522-deployment",
+      "UnauthRoleName": "amplify-jobboard-staging-134522-unauthRole",
+      "StackName": "amplify-jobboard-staging-134522",
+      "StackId": "arn:aws:cloudformation:us-east-1:501010171970:stack/amplify-jobboard-staging-134522/5345b450-aec9-11ed-bc65-0ade07d62d69",
+      "AmplifyAppId": "d2a24hhrcbd5ni"
+    },
+    "categories": {
+      "auth": {
+        "JobBoard": {}
+      },
+      "storage": {
+        "s3jobboardstorage66ef9966": {}
+      }
+    }
+  }
+}

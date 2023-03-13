@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3jobboardstorage66ef9966",
+  "bucketName": "jobboard-storage-66ef9966",
+  "policyUUID": "5ecd0a82",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

@@ -1,3 +1,8 @@
+.home_container {
+  margin: 0 auto;
+  width: 70%;
+}
+
 .main {
   display: flex;
   flex-direction: column;
