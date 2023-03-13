@@ -2,14 +2,14 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-// import getData from "@/pages/api/getdata";
+import getData from "@/pages/api/getdata";
 
 function Jobdetails({ data }) {
     const router = useRouter();
 
-    // useEffect(() => {
-    //     getData();
-    // }, []);
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <div className="App">

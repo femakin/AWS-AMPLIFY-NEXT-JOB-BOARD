@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Jobdetails from "@/components/JobDetails/Jobdetails";
-// import getData from "./api/getdata";
+ import getData from "./api/getdata";
 import { DataStore } from "@aws-amplify/datastore";
 import { ApplicantList, JobList } from "@/models";
 
@@ -15,9 +15,9 @@ function Home() {
 
     useEffect(() => {
         const fetchData = async () => {
-            // const result = await getData();
+             const result = await getData();
 
-            const result = await DataStore?.query(JobList);
+            // const result = await DataStore?.query(JobList);
 
             setData(result);
         };
