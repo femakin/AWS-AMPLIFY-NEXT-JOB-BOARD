@@ -1,5 +1,5 @@
 import { Amplify } from "aws-amplify";
-import awsconfig from "../aws-exports";
+// import awsconfig from "../aws-exports";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
@@ -8,7 +8,7 @@ import Jobdetails from "@/components/JobDetails/Jobdetails";
 import { DataStore } from "@aws-amplify/datastore";
 import { ApplicantList, JobList } from "@/models";
 
-Amplify.configure({ ...awsconfig, ssr: true });
+// Amplify.configure({ ...awsconfig, ssr: true });
 
 function Home() {
     const [data, setData] = useState([]);

@@ -4,7 +4,7 @@ import { Amplify } from "aws-amplify";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 // import awsconfig from "../../Backend/Backend/aws-exports";
-import awsconfig from "../aws-exports";
+// import awsconfig from "../aws-exports";
 import { useRouter } from "next/navigation";
 import { Auth } from "aws-amplify";
 import styles from "../styles/Home.module.css";
@@ -16,7 +16,7 @@ import Navbar from "@/components/Navbar/Navbar";
 // import addnewjob from "./api/addnewjob";
 import { JobList } from "@/models";
 
-Amplify.configure({ ...awsconfig, ssr: true });
+// Amplify.configure({ ...awsconfig, ssr: true });
 
 async function getData() {
     const res = await DataStore?.query(ApplicantList);
