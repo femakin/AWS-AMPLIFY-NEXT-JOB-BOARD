@@ -18,7 +18,6 @@ function Home() {
             // const result = await getData();
 
             const result = await DataStore?.query(JobList);
-            console.log(result, 'resultttt')
 
             setData(result);
         };
