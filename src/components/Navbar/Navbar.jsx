@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Amplify } from "aws-amplify";
 import { useRouter } from "next/router";
 import "@aws-amplify/ui-react/styles.css";
-import awsconfig from "../../../Backend/Backend/aws-exports";
+import awsconfig from "../../aws-exports";
 import { Auth } from "aws-amplify";
 
 Amplify.configure({ ...awsconfig, ssr: true });

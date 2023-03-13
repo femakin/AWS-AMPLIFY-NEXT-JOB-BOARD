@@ -1,5 +1,5 @@
 import { DataStore } from "@aws-amplify/datastore";
-import { JobList } from "../../../Backend/Backend/models";
+import { JobList } from "../../models";
 
 export default async function addnewjob(data) {
     try {
