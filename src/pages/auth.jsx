@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Amplify } from "aws-amplify";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
-import awsconfig from "../../Backend/Backend/aws-exports";
+import awsconfig from "../aws-exports";
 import { useRouter } from "next/navigation";
 import { Auth } from "aws-amplify";
 
